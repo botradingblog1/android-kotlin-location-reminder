@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.project4.locationreminders.reminder_description.ReminderDescriptionViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout_reminder_description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/padding_medium">
+
+        <TextView
+            android:id="@+id/textview_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reminder_details"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_title_label"
+            android:layout_width="@dimen/form_column_width"
+            android:layout_height="wrap_content"
+            android:text="@string/reminder_title"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginTop="@dimen/margin_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_details" />
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.title}"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_normal"
+            app:layout_constraintStart_toEndOf="@+id/textview_title_label"
+            app:layout_constraintTop_toBottomOf="@+id/textview_details" />
+
+        <TextView
+            android:id="@+id/textview_description_label"
+            android:layout_width="@dimen/form_column_width"
+            android:layout_height="wrap_content"
+            android:text="@string/reminder_description"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_title_label" />
+
+        <TextView
+            android:id="@+id/textview_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:text="@{viewModel.description}"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/textview_description_label"
+            app:layout_constraintTop_toBottomOf="@+id/textview_title_label" />
+
+        <TextView
+            android:id="@+id/textview_latitude_label"
+            android:layout_width="@dimen/form_column_width"
+            android:layout_height="wrap_content"
+            android:text="@string/reminder_latitude"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_description_label" />
+
+        <TextView
+            android:id="@+id/textview_latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:text="@{viewModel.latitude}"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/textview_latitude_label"
+            app:layout_constraintTop_toBottomOf="@+id/textview_description_label" />
+
+        <TextView
+            android:id="@+id/textview_longitude_label"
+            android:layout_width="@dimen/form_column_width"
+            android:layout_height="wrap_content"
+            android:text="@string/reminder_longitude"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_latitude_label" />
+
+        <TextView
+            android:id="@+id/textview_longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:text="@{viewModel.longitude}"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/textview_longitude_label"
+            app:layout_constraintTop_toBottomOf="@+id/textview_latitude_label" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

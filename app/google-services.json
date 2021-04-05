@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "967832481622",
+    "project_id": "todogeofence",
+    "storage_bucket": "todogeofence.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967832481622:android:3909e2ebe129b79453f0f7",
+        "android_client_info": {
+          "package_name": "com.justmobiledev.todogeofence"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967832481622-kne8ccokcml8ual062ufi9fke9jb7lgu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.justmobiledev.todogeofence",
+            "certificate_hash": "5496aeb3f40468f50a22280f4753ad1826b20f46"
+          }
+        },
+        {
+          "client_id": "967832481622-t4pua0pofuut1j8gf7ve0v3bmteuslom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjMGlWEDMscikMfuHPK2R073divXYBgD8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967832481622-t4pua0pofuut1j8gf7ve0v3bmteuslom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
